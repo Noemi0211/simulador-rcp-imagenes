@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simulador RCP</title>
+
+<style>
+body {
+    text-align: center;
+    font-family: Arial;
+}
+
+/* logo */
+.logo {
+    width: 150px;
+    margin: 20px;
+}
+
+/* imagen caso */
+.escena {
+    width: 350px;
+    margin: 20px;
+}
+
+/* ocultar pantallas */
+#juego {
+    display: none;
+}
+
+#resultado {
+    display: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- 🔵 PANTALLA INICIAL -->
+<div id="inicio">
+
+<img src="logo.png" class="logo">
+
+<h1>Simulador RCP</h1>
+
+<p>Selecciona el tipo de caso y comienza.</p>
+
+<select>
+<option>4H</option>
+<option>4T</option>
+<option>Escenarios especiales</option>
+<option>Pacientes especiales</option>
+</select>
+
+<br><br>
+
+<button onclick="empezar()">Comenzar</button>
+
+</div>
+
+<!-- 🔵 PANTALLA JUEGO -->
+<div id="juego">
+
+<img src="logo.png" class="logo">
+
+<p>Observa la imagen y responde:</p>
+
+<img src="caso19.png" class="escena">
+
+<h2>¿Qué le ocurre al paciente?</h2>
+
+<button onclick="comprobar(false)">Hipotermia</button>
+<button onclick="comprobar(true)">Hipertermia</button>
+<button onclick="comprobar(false)">Hipoxia</button>
+
+</div>
+
+<!-- 🔵 RESULTADO -->
+<div id="resultado">
+
+<img src="logo.png" class="logo">
+
+<h2 id="mensaje"></h2>
+
+<p>Caso compatible con hipertermia (4H).</p>
+
+<button onclick="location.reload()">Reiniciar</button>
+
+</div>
+
+<script>
+
+/* pasar al juego */
+function empezar(){
+    document.getElementById("inicio").style.display="none";
+    document.getElementById("juego").style.display="block";
+}
+
+/* comprobar respuesta */
+function comprobar(correcto){
+
+    document.getElementById("juego").style.display="none";
+    document.getElementById("resultado").style.display="block";
+
+    if(correcto){
+        document.getElementById("mensaje").innerText="✅ Correcto";
+    } else {
+        document.getElementById("mensaje").innerText="❌ Incorrecto";
+    }
+}
+
+</script>
+
+</body>
+</html>
