@@ -1,0 +1,36 @@
+/* Estilo general */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 20px;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    margin: 20px;
+}
+
+/* Imagen del caso */
+.escena {
+    width: 350px;
+    margin: 20px;
+}
+
+/* Botones */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Ocultar pantallas */
+#juego {
+    display: none;
+}
+
+#resultado {
+    display: none;
+}
