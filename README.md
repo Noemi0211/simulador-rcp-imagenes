@@ -20,14 +20,14 @@ El alumnado observa una imagen de un escenario clínico y debe seleccionar la pa
 - Selección de respuesta
 - Retroalimentación inmediata
 
-## Uso en el aula
+## Instrucciones de uso en el aula
 - El alumnado observa una imagen clínica.
 - Selecciona el diagnóstico más probable.
 - Recibe feedback explicativo con diagnóstico, signos y síntomas y protocolo de actuación.
 - Se puede usar como actividad individual o de repaso.
 - Permite trabajar el razonamiento clínico y la toma de decisiones.
 
-## Cómo usarlo
+## Cómo probarlo en local
 - Descargar o abrir el archivo index.html
 - Abrirlo con un navegador (Chrome, Edge, etc.)
 - Pulsar “Comenzar”
