@@ -1,75 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simulador RCP</title>
 <link rel="stylesheet" href="css/style.css">
-
-
-
 </head>
-
 <body>
-<script src="js/script.js"></script>
-
-<!-- 🔵 PANTALLA INICIAL -->
-<div id="inicio">
-
-<img src="logo.png" class="logo">
-
-<h1>Simulador RCP</h1>
-
-<p>Selecciona el tipo de caso y comienza.</p>
-
-<select>
-<option>4H</option>
-<option>4T</option>
-<option>Escenarios especiales</option>
-<option>Pacientes especiales</option>
-</select>
-
-<br><br>
-
-<button onclick="empezar()">Comenzar</button>
-
-</div>
+    <main>
+        <!-- 🔵 PANTALLA INICIAL -->
+        <section id="inicio" class="pantalla pantalla-inicio">
+            <img src="logo.png" class="logo" alt="Logo del simulador">
+            <h1 id="titulo">Simulador RCP</h1>
+            <p id="descripcion">Selecciona el tipo de caso y comienza.</p>
+            <div class="form-group">
+                <label for="categoria">Categoría del caso</label>
+                <select id="categoria" name="categoria">
+                    <option>4H</option>
+                    <option>4T</option>
+                    <option>Escenarios especiales</option>
+                    <option>Pacientes especiales</option>
+                    <option>Miscelánea</option>
+                </select>
+            </div>
+            <button id="botonComenzar" onclick="empezar()">Comenzar</button>
+        </section>
 
 <!-- 🔵 PANTALLA JUEGO -->
-<div id="juego">
+        <section id="juego" class="pantalla pantalla-juego" aria-hidden="true">
+            <div class="juego-contenedor">
+                <article class="juego-columna izquierda">
+                    <img src="caso19.png" class="escena" alt="Caso clínico">
+                </article>
+                <aside class="juego-columna derecha">
+                    <img src="logo.png" class="logo" alt="Logo del simulador">
+                    <p>Observa la imagen y responde:</p>
+                    <h2>¿Qué le ocurre al paciente?</h2>
+                    <div id="respuestas" class="respuestas" role="group" aria-label="Opciones de respuesta"></div>
+                </aside>
+            </div>
+        </section>
 
-<img src="logo.png" class="logo">
+<!-- 🔵 PANTALLA FINAL -->
+        <section id="resultado" class="pantalla pantalla-resultado" aria-hidden="true">
+            <img src="logo.png" class="logo" alt="Logo del simulador">
+            <h2 id="mensaje"></h2>
+            <p id="textoResultado">Gracias por participar. Reinicia para volver a empezar.</p>
+            <button onclick="location.reload()">Reiniciar</button>
+        </section>
+    </main>
 
-<p>Observa la imagen y responde:</p>
-
-<img src="caso19.png" class="escena">
-
-<h2>¿Qué le ocurre al paciente?</h2>
-
-<button onclick="comprobar(false)">Hipotermia</button>
-<button onclick="comprobar(true)">Hipertermia</button>
-<button onclick="comprobar(false)">Hipoxia</button>
-
-</div>
-
-<!-- 🔵 RESULTADO -->
-<div id="resultado">
-
-<img src="logo.png" class="logo">
-
-<h2 id="mensaje"></h2>
-
-<p>Caso compatible con hipertermia (4H).</p>
-
-<button onclick="location.reload()">Reiniciar</button>
-
-</div>
-
-<script>
-
-/* pasar al juego */
-
-
-</script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
